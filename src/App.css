@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppings:wght@400;500;700&display=swap');
+
+:root {
+    --primary-bg: rgb(102, 92, 171);
+    --light-theme-btn: #430f58;
+    --dark-theme-btn: #c3295d;
+    --white: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppings', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
