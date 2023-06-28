@@ -11,7 +11,7 @@
 .theme-button {
     padding: 5px 10px;
     border-radius: 8px;
-    bordeR: none;
+    border: none;
     cursor: pointer;
     background-color: var(--light-theme-btn);
     color: var(--white);
