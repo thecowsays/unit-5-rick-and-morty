@@ -28,7 +28,7 @@ function Homepage() {
 
     return (
         <div className="homepage-container">
-            <Search />
+            <Search setCharacters={setCharacters} />
             <h1>Main Characters</h1>
             <div className="characters-container">
                 {
