@@ -7,6 +7,8 @@ function Episodes() {
     // when I select an episode, I want to see the chars within same
     // https://rickandmortyapi.com/api/episode
     // I need to create the UI, how many eps when page loads?
+    const [options, setOptions] = useState([])
+
     useEffect(
         () => {
             //make api call to find out # of eps
@@ -18,7 +20,6 @@ function Episodes() {
                     for (let i = 1; i <= res.data.info.count; i++) {
                         newOptions.push(i)
                     }
-                    const [newOptions, setOptions] = useState([])
                     console.log(newOptions)
                     setOptions(newOptions)
                 })
