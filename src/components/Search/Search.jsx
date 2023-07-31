@@ -18,10 +18,10 @@ function Search({ setCharacters }) {
         // make an API call to get the matching characters
         axios.get(`https://rickandmortyapi.com/api/character/?name=${query}`)
             .then(res => {
-                console.log(res.data.results)
+                // console.log(res.data.results)
                 // I have the data, what do I do with it?
                 // I want to change what is in characters
-                setCharacters(res.data.results)
+                setCharacters(res?.data?.results)
             })
             .catch(err => {
                 console.log(err.response.status)
