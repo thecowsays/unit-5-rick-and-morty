@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import CharacterCard from '../../components/CharacterCard/CharacterCard'
 import Search from '../../components/Search/Search'
+import { ThemeContext } from '../../contexts/ThemeContext'
 
 import './Homepage.css'
 
@@ -10,6 +11,10 @@ function Homepage() {
     // Show the characters when the page loads
     // Create state to hold the characters
     const [characters, setCharacters] = useState([])
+
+    // Change to use global state from context
+    //NOTE: {} NOT []
+    const { darkMode, setDarkMode } = useContext(ThemeContext)
 
     useEffect(
         () => {
@@ -28,7 +33,7 @@ function Homepage() {
     // Where do I get the data?
 
     return (
-        <div className="homepage-container">
+        <div className={darkMode ? "home-container home-dark" : "home-container"}>
             <Search setCharacters={setCharacters} />
             <h1>Main Characters</h1>
             <div className="characters-container">

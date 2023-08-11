@@ -6,6 +6,7 @@ import About from './pages/About/About'
 import Episodes from './pages/Episodes/Episodes'
 import Footer from './components/Footer/Footer'
 import CharacterDetails from './pages/CharacterDetails/CharacterDetails'
+import ThemeContextProvider from './contexts/ThemeContext';
 
 import './App.css'
 
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ThemeContextProvider>
       <Header />
 
       <Routes>
@@ -22,7 +24,8 @@ function App() {
         <Route path='/details/:characterId' element={<CharacterDetails />} />
       </Routes>
 
-      <Footer />
+        <Footer />
+      </ThemeContextProvider>
     </BrowserRouter>
   )
 }

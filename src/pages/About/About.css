@@ -13,3 +13,8 @@
 .about-container img {
     width: 100%;
 }
+
+.about-dark{
+    background-color: black;
+    color:white;
+ }
